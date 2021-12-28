@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(186,18,223);
+    background: linear-gradient(90deg, rgba(186,18,223,1) 0%, rgba(55,0,60,1) 99%);
+    color:white;
+    background-repeat: no-repeat;
+}
+h1{
+    margin:7px
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(5,14rem);
+    grid-template-rows: repeat(4,12rem);
+   grid-gap:2rem;
+   height: 100vh;
+   perspective: 900px;
+}
+.card{
+    background-color: green;
+    box-shadow: rgba(0,0,0,0.2) 1px 5px 10px;
+    position: relative;
+    transform-style:preserve-3d;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toggleCard{
+    transform: rotateY(180deg);
+    
+}
+.front{
+    height: 100%;
+    width: 100%;
+    position:absolute
+}
+.back{
+    height: 100%;
+    width:100%;
+    background-color: white;
+    position: absolute;
+    backface-visibility: hidden;
+}
